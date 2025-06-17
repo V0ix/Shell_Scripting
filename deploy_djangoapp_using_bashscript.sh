@@ -38,18 +38,25 @@ echo "Building and deploying the Django app..."
 
 echo "************** DEPLOYMENT STARTED *************"
 
+#calling cloning function
 if ! cloning;then
   echo "error occur while cloning"
   exit 1
 fi
+
+#calling installment function
 if ! installment;then
   echo "installment not done "
   exit 1
 fi
+
+#calling restarting function
 if ! restarting;then
   echo "error occur"
   exit 1
 fi
+
+#calling build function
 if ! build;then
   echo "building problem"
   exit 1
